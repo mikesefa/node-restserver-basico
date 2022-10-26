@@ -7,8 +7,8 @@ const router = Router();
 
 router.get('/', userget);
 
-
-router.put('/', userput);
+//ruta con parametro id para identificar 
+router.put('/:id', userput);
 
 
 router.post('/', userpost);

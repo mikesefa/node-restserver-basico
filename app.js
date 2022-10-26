@@ -1,4 +1,4 @@
-console.log('hola mundo')
+/* console.log('hola mundo') */
 require('dotenv').config();
 
 const express = require('express')
@@ -8,12 +8,12 @@ const app = express()
     res.send('Actualizando process')
 }) */
 
-app.listen(process.env.PORT, () => {
+/* app.listen(process.env.PORT, () => {
     console.log('servidor corriendo en puerto ', process.env.PORT);
-});
+}); */
 
 const Server = require('./models/server');
 
 const server = new Server();
 
-server.listen();
+server.listen(); 

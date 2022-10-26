@@ -1,14 +1,14 @@
 
-const { response } = require('express');
+const { response, request } = require('express');
 
 
-const userget = (req, res = response) => {
+const userget = (req = request, res = response) => {
     res.json({
         msg: 'api Get'
     });
 }
 
-const userpost = (req, res = response) => {
+const userpost = (req = request, res = response) => {
     const { nombre, Apellido, edad } = req.body;
 
     res.json({
@@ -19,13 +19,15 @@ const userpost = (req, res = response) => {
     });
 }
 
-const userput = (req, res = response) => {
+const userput = (req = request, res = response) => {
+
+    const { id } = req.params;
     res.json({
         msg: 'api put'
     });
 }
 
-const userdelete = (req, res = response) => {
+const userdelete = (req = request, res = response) => {
     res.json({
         msg: 'api delete'
     });

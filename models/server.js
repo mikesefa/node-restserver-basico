@@ -9,7 +9,7 @@ class Server {
 
     constructor() {
         this.app = express();
-        this.port = process.env.PORT2;
+        this.port = process.env.PORT;
         this.userPath = '/api/usuarios';
 
         //Middlewares
